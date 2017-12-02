@@ -1,2 +1,2 @@
 # podcast-rss2json
-Parse podcast's RSS feeds to Json.
+Util for parse podcast's RSS feed to JSON object.
