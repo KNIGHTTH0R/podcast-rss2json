@@ -32,6 +32,7 @@ foreach($items as $item) {
    $description = $item->getElementsByTagNameNS($ns, 'summary')->item(0)->nodeValue;
    $duration = $item->getElementsByTagNameNS($ns, 'duration')->item(0)->nodeValue;
    $pubDate = $item->getElementsByTagName('pubDate')->item(0)->firstChild->nodeValue;
+   $image = $item->getElementsByTagNameNS($ns, 'image')->item(0)->getAttribute('href');
    $media = $item->getElementsByTagName('enclosure')->item(0)->getAttribute('url');
    $type = $item->getElementsByTagName('enclosure')->item(0)->getAttribute('type');
    
@@ -41,6 +42,7 @@ foreach($items as $item) {
    $json['item'][$i]['pubdate'] = $pubDate;
    $json['item'][$i]['type'] = $type;
    $json['item'][$i]['media'] = $media;
+   $json['item'][$i]['image'] = $image;
    
    $i++;   
 }
